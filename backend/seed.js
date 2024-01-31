@@ -18,10 +18,10 @@ const seed = async () => {
     /* ************************************************************************* */
 
     // Generating Seed Data
-    await database.query("delete from item");
+    await database.query("delete from shoe");
     queries.push(
       database.query(
-        `INSERT INTO item (brand, model, name, color, date_release) VALUES
+        `INSERT INTO shoe (brand, model, name, color, date_release) VALUES
             ('Air Jordan', '1', 'Chicago', 'WHITE/BLACK-RED', '16/09/1985'),
             ('Nike', 'Cortez', 'Forest Gump', 'WHITE/VARSITY RED-VARSITY ROYAL', '28/02/2015'),
             ('Onitsuka Tiger', 'Mexico 66', 'Kill Bill', 'YELLOW/BLACK', '01/01/2017'),
