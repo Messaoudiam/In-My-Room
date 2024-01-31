@@ -1,4 +1,38 @@
-create table item (
-  id int unsigned primary key auto_increment not null,
-  title varchar(255) not null
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE `user` (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  admin BOOLEAN NOT NULL DEFAULT false,
+  nickname VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  hashedPassword VARCHAR(100) NOT NULL
 );
+
+DROP TABLE IF EXISTS item;
+CREATE TABLE item (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  brand VARCHAR(100) NOT NULL,
+  model VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL,
+  color VARCHAR(100) NOT NULL,
+  image VARCHAR(255),
+  date_release VARCHAR(50) NOT NULL 
+);
+
+DROP TABLE IF EXISTS category;
+CREATE TABLE category (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50)
+  );
+
+DROP TABLE IF EXISTS itemcategory;
+CREATE TABLE itemcategory (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  category_id INT,
+  item_id INT,
+  CONSTRAINT category FOREIGN KEY (category_id) REFERENCES category(id),
+  CONSTRAINT item_id FOREIGN KEY (item_id) REFERENCES item(id)
+);
+
+SET FOREIGN_KEY_CHECKS = 1;
