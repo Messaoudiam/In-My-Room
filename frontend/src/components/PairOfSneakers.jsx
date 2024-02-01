@@ -1,10 +1,11 @@
 // react
 import { useEffect, useState } from "react";
+
+// react-router-dom
+import { Link } from "react-router-dom";
+
 // style
 import "./style/PairOfSneakers.css";
-
-// assets
-// import cortez from "../assets/cortavavez.png";
 
 function PairOfSneakers() {
   const [shoesData, setShoesData] = useState([]);
@@ -19,15 +20,17 @@ function PairOfSneakers() {
     <div className="aaa">
       {shoesData.map((shoe) => (
         <div>
-          <div className="image">
-            <img src={shoe.image} alt="shoe" />
-          </div>
-          <p key={shoe.id}>
-            {shoe.brand} {shoe.model}
-          </p>
-          <div>
-            <p> {shoe.name} </p>
-          </div>
+          <Link to={`/shoes/${shoe.id}`}>
+            <div className="image">
+              <img src={shoe.image} alt="shoe" />
+            </div>
+            <p key={shoe.id}>
+              {shoe.brand} {shoe.model}
+            </p>
+            <div>
+              <p> {shoe.name} </p>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
