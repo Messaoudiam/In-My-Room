@@ -10,10 +10,11 @@ class ShoeManager extends AbstractManager {
   // The C of CRUD - Create operation
 
   async create(shoe) {
+    const { brand, model, name, color, date_release: dateRelease } = shoe;
     // Execute the SQL INSERT query to add a new item to the "item" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title) values (?)`,
-      [shoe.title]
+      `insert into ${this.table} (brand, model, name, color, date_release) values (?, ?, ?, ?, ?)`,
+      [brand, model, name, color, dateRelease]
     );
 
     // Return the ID of the newly inserted item

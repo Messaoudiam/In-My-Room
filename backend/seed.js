@@ -22,13 +22,13 @@ const seed = async () => {
     queries.push(
       database.query(
         `INSERT INTO shoe (brand, model, name, color, image, date_release) VALUES
-            ('Air Jordan', '1', 'Chicago', 'WHITE/BLACK-RED', '/public/assets/aj1chi.png', '16/09/1985'),
-            ('Nike', 'Cortez', 'Forest Gump', 'WHITE/VARSITY RED-VARSITY ROYAL', '/public/assets/cortavavez.png', '28/02/2015'),
-            ('Onitsuka Tiger', 'Mexico 66', 'Kill Bill', 'YELLOW/BLACK', '/public/assets/otmkb.png', '01/01/2017'),
-            ('Nike', 'Air Yeezy 2', 'Red October', 'RED', '/public/assets/ay1ro.png', '09/02/2014'),
-            ('Adidas', 'Stan Smith', 'White Green', 'RUNNING WHITE/RUNNING WHITE/FAIRWAY', '/public/assets/stans.png', '1964'),
-            ('Adidas', 'Yeezy Boost 350', 'Turtledove', 'TURTLEDOVE/BLUE GRAPHITE/CHALK WHITE', '/public/assets/ybtd.png', '27/06/2015'),
-            ('Air Jordan', '1', 'Maison Chateau Rouge', 'PALE VANILLA/CINNAMON', '/public/assets/aj1maison.png', '30/11/2019')`
+            ('Air Jordan', '1', 'Chicago', 'WHITE/BLACK-RED', '/assets/aj1chi.png', '16/09/1985'),
+            ('Nike', 'Cortez', 'Forest Gump', 'WHITE/VARSITY RED-VARSITY ROYAL', '/assets/cortavavez.png', '28/02/2015'),
+            ('Onitsuka Tiger', 'Mexico 66', 'Kill Bill', 'YELLOW/BLACK', '/assets/otmkb.png', '01/01/2017'),
+            ('Nike', 'Air Yeezy 2', 'Red October', 'RED', '/assets/ay1ro.png', '09/02/2014'),
+            ('Adidas', 'Stan Smith', 'White Green', 'RUNNING WHITE/RUNNING WHITE/FAIRWAY', '/assets/stans.png', '1964'),
+            ('Adidas', 'Yeezy Boost 350', 'Turtledove', 'TURTLEDOVE/BLUE GRAPHITE/CHALK WHITE', '/assets/ybtd.png', '27/06/2015'),
+            ('Air Jordan', '1', 'Maison Chateau Rouge', 'PALE VANILLA/CINNAMON', '/assets/aj1maison.png', '30/11/2019')`
       )
     );
 
