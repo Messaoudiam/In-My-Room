@@ -1,17 +1,17 @@
 img {
-    height: 20vh;
+  height: 20vh;
 }
 
 .aaa {
-    display: grid;
-    grid-template-columns: repeat(3, 500px);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 500px);
+  gap: 30px;
 }
 
 @media screen and (max-width: 705px) {
-    .aaa {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .aaa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
