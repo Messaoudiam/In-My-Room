@@ -10,3 +10,17 @@ body {
 .App {
   text-align: center;
 }
+
+button {
+  height: 5vh;
+  width: 31vh;
+  background-color: #394B09;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.buttonConnect {
+  display: flex;
+}

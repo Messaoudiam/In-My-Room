@@ -18,6 +18,7 @@ router.get("/shoes/:id", shoeControllers.read);
 // Route to add a new item
 router.post("/shoes", shoeControllers.add);
 
+// Route to patch an existant item
 router.patch("/shoes/:id", shoeControllers.edit);
 
 /* ************************************************************************* */
