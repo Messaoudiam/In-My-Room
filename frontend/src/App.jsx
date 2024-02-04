@@ -1,3 +1,6 @@
+// react-router-dom
+import { Link } from "react-router-dom";
+
 // style
 import "./App.css";
 
@@ -11,6 +14,11 @@ function App() {
   return (
     <div className="App">
       <img className="INMRlogo" src={logo} alt="IMRSneakers" />
+      <div className="buttonConnect">
+        <Link to="/je-me-connecte">
+          <button type="button"> Me connecter </button>
+        </Link>
+      </div>
       <PairOfSneakers />
     </div>
   );

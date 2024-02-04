@@ -19,7 +19,7 @@ function PairOfSneakers() {
   return (
     <div className="aaa">
       {shoesData.map((shoe) => (
-        <div>
+        <div className="zzz">
           <Link to={`/shoes/${shoe.id}`}>
             <div className="image">
               <img src={shoe.image} alt="shoe" />
@@ -38,5 +38,3 @@ function PairOfSneakers() {
 }
 
 export default PairOfSneakers;
-
-//       {shoesData.map((shoe) => (
