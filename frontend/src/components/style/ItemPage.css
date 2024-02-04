@@ -1,0 +1,49 @@
+.itemPage {
+    color: #394B09;
+
+}
+
+.itemImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5vw;
+}
+
+.INMRlogo {
+    display: flex;
+    justify-content: center
+}
+
+.imagedanslitem {
+    height: 30vh;
+}
+
+.textunderImage {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: 900
+}
+
+.brandModelItem {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 3vw;
+}
+
+.brandModelItem p {
+    margin: 0;
+}
+
+.brandModelItem .detailsItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+span {
+    font-size: 5rem;
+}

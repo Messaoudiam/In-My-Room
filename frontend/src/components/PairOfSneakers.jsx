@@ -27,7 +27,7 @@ function PairOfSneakers() {
             <p key={shoe.id}>
               {shoe.brand} {shoe.model}
             </p>
-            <div>
+            <div className="shoeName">
               <p> {shoe.name} </p>
             </div>
           </Link>

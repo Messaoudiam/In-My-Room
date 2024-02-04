@@ -7,6 +7,9 @@ import { useParams } from "react-router-dom";
 // style
 import "./style/ItemPage.css";
 
+// assets
+import logo from "../../public/assets/Vlogo.png";
+
 function ItemPage() {
   const { id } = useParams();
 
@@ -20,15 +23,27 @@ function ItemPage() {
 
   return (
     <div className="itemPage">
+      <div className="INMRlogo">
+        <img src={logo} alt="logo" />
+      </div>
       <div>
-        <div className="image">
-          <img src={itemData.image} alt="shoe" />
+        <div className="itemImage">
+          <img className="imagedanslitem" src={itemData.image} alt="shoe" />
         </div>
-        <p key={itemData.id}>
-          {itemData.brand} {itemData.model}
-        </p>
-        <div>
-          <p> {itemData.name} </p>
+        <div className="textUnderImage">
+          <div className="brandModelItem">
+            <p key={itemData.id}>
+              {itemData.brand} {itemData.model}
+            </p>
+            <p>
+              {" "}
+              <span> {itemData.name} </span>{" "}
+            </p>
+            <div className="detailsItem">
+              <p> Color: {itemData.color} </p>
+              <p> Date de sortie: {itemData.date_release}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
