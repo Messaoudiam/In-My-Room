@@ -4,9 +4,11 @@
 
 // Import the manager modules responsible for handling data operations on the tables
 const ShoeManager = require("./models/ShoeManager");
+const UserManager = require("./models/UserManager");
 
 const managers = [
   ShoeManager,
+  UserManager,
   // Add other managers here
 ];
 
