@@ -18,6 +18,16 @@ const seed = async () => {
     /* ************************************************************************* */
 
     // Generating Seed Data
+    await database.query("delete from user");
+    queries.push(
+      database.query(
+        `INSERT INTO user (admin, nickname, email, password) VALUES
+            ('1', 'Mess', 'mess@gmail.com', '123abcABC@@'),
+            ('0', 'AliLeBoss', 'alileboss@gmail.com', '123abcABC@@'),
+            ('0', 'GaetanLeBG', 'gaetanlebg@gmail.com', '123abcABC@@')`
+      )
+    );
+
     await database.query("delete from shoe");
     queries.push(
       database.query(
@@ -46,17 +56,6 @@ const seed = async () => {
             ('Collab')`
       )
     );
-    // Optional: Truncate tables (remove existing data)
-    // await database.query("truncate item");
-
-    // Insert fake data into the 'item' table
-    // for (let i = 0; i < 10; i += 1) {
-    //   queries.push(
-    //     database.query("insert into item(title) values (?)", [
-    //       faker.lorem.word(),
-    //     ])
-    //   );
-    // }
 
     /* ************************************************************************* */
 
