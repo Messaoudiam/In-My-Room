@@ -21,6 +21,9 @@ router.post("/shoes", shoeControllers.add);
 // Route to patch an existant item
 router.patch("/shoes/:id", shoeControllers.edit);
 
+// Route to delete an existant item
+router.delete("/shoes/:id", shoeControllers.destroy);
+
 /* ************************************************************************* */
 
 module.exports = router;

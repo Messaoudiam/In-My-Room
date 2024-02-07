@@ -62,9 +62,13 @@ class ShoeManager extends AbstractManager {
   // The D of CRUD - Delete operation
   // TODO: Implement the delete operation to remove an item by its ID
 
-  // async delete(id) {
-  //   ...
-  // }
+  async delete(id) {
+    const [affectedRows] = await this.database.query(
+      `DELETE FROM ${this.table} WHERE id = ?`,
+      [id]
+    );
+    return affectedRows;
+  }
 }
 
 module.exports = ShoeManager;
